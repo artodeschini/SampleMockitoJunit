@@ -14,7 +14,7 @@ import static  org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 // para usar veja o pom
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class) // substitui o RunWith do junit4
 public class MockitoSamples {
 
     // com anotation

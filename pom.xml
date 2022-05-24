@@ -85,7 +85,7 @@
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-runner</artifactId>
                         <version>1.5.2</version>
-                        <scope>test</scope>
+<!--                        <scope>test</scope>-->
                     </dependency>
                 </dependencies>
             </plugin>
