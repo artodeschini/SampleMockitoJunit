@@ -1,6 +1,7 @@
 package org.todeschini;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -105,4 +106,15 @@ class CalculadoraTest {
         }).isInstanceOf(RuntimeException.class).hasMessage("divisao nao pode ser por zero").hasMessageContaining("zero");
     }
 
+    @Test
+    void naoDeveDividirPorZeroSemAssertJ() {
+        //given
+        int n1 = 10, n2 = 0;
+
+        //when // then
+        RuntimeException e = Assertions.assertThrows(RuntimeException.class, () -> calculadora.dividir(n1, n2));
+        Assertions.assertTrue(e.getMessage().contains("zero"));
+        Assertions.assertEquals(e.getMessage(), "divisao nao pode ser por zero");
+
+    }
 }
