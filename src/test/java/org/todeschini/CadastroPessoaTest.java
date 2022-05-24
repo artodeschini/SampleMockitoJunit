@@ -1,9 +1,6 @@
 package org.todeschini;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static  org.assertj.core.api.Assertions.*;
 
@@ -22,8 +19,8 @@ public class CadastroPessoaTest {
     }
 
     @Test
+    @DisplayName("Deve criar o cadastro de pessoas sem nenhuma pessoa na lista pessoas")
     public void deveCriarCadastroDePessoasSemPessoas() {
-        //given
         //when
         //then
 
@@ -36,6 +33,7 @@ public class CadastroPessoaTest {
     }
 
     @Test
+    @DisplayName("Deve adicionar uma pessoas na lista de pessoas")
     public void deveAdicionarPessoasEmListaDePessoas() {
         //given
         Pessoa pessoa = new Pessoa();
@@ -53,6 +51,7 @@ public class CadastroPessoaTest {
     }
 
     @Test
+    @DisplayName("nao deve adicionar pessoa a lista de pessoas se o nome estiver null")
     public void naoDeveAdicionarPessoasComNomeVazio() {
         //given
         Pessoa pessoa = new Pessoa();
@@ -70,6 +69,7 @@ public class CadastroPessoaTest {
     }
 
     @Test
+    @DisplayName("deve remover a pessoa da lista de pessoas do cadastro")
     public void deveRemoverPessoaDoCadastro()  {
         // given
         Pessoa pessoa = new Pessoa();
@@ -84,6 +84,7 @@ public class CadastroPessoaTest {
     }
 
     @Test
+    @DisplayName("deve dar erro ao tentar remover uma pessoa que não existe no cadastro")
     public void deveLancarErroAoTentarRemoverPessoaInexistente()  {
         // given
         Pessoa pessoa = new Pessoa();
